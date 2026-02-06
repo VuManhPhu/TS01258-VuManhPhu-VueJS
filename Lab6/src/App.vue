@@ -16,10 +16,10 @@ import Bai4 from './components/Bai4.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" /> -->
-    <!-- <Bai1 /> -->
-    <!-- <Bai2 /> -->
-    <Bai3 />
-    <!-- <Bai4 /> -->
+    <!-- <Bai1 />
+    <Bai2 />
+    <Bai3 /> -->
+    <Bai4 />
 </template>
 
 <style scoped>

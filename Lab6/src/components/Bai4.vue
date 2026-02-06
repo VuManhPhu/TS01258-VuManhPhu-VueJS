@@ -28,6 +28,17 @@
           />
         </div>
 
+         <div class="mb-3">
+          <label for="status">Tình trạng</label>
+          <input
+            type="text"
+            class="form-control"
+            v-model="student.status"
+            id="status"
+            required
+          />
+        </div>
+
         <div class="mb-3">
           <label for="dob">Ngày sinh:</label>
           <input
@@ -51,6 +62,7 @@
             <tr>
               <th>Họ và tên</th>
               <th>Điểm</th>
+              <th>Tình trạng</th>
               <th>Ngày sinh</th>
               <th>Chức năng</th>
             </tr>
@@ -59,6 +71,7 @@
             <tr v-for="(stu, index) in students" :key="index">
               <td>{{ stu.name }}</td>
               <td>{{ stu.score }}</td>
+              <td>{{ stu.status }}</td>
               <td>{{ stu.dob }}</td>
               <td>
                 <button
@@ -112,7 +125,7 @@ function submitForm() {
   resetForm();
 }
 
-// Hàm chuẩn bị dữ liệu để sửa [cite: 211]
+// Hàm chuẩn bị dữ liệu để sửa
 function editStudent(index) {
   student.value = { ...students.value[index] }; // Copy dữ liệu vào form
   isEditing.value = true;
@@ -126,7 +139,7 @@ function deleteStudent(index) {
   }
 }
 
-// Hàm reset form [cite: 219]
+// Hàm reset form
 function resetForm() {
   student.value = {
     name: "",
